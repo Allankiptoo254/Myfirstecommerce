@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url("images/bakground.signup.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background:transparent ;
+    width: 80%;
+    border-radius: 16px;
+    color: #ffffff;
+    padding:30px 40px;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(255,255,255, .2);
+}
+
+   .input-box input.white-bg,
+        .input-box textarea.white-bg,
+        .input-box select.white-bg {
+            background: white;
+            color: black;
+        }
+
+.container .input-box{
+    width: 500px;
+    height:100%;
+    margin: 30px 0;
+    /*!*position: relative;*! use when adding icons*/
+}
+
+.input-box input{
+    margin-top: -100px;
+    height: 60px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255,255,255, .2);
+    width: 100%;
+    border-radius: 40px;
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color:black;
+}
+
+/*.input-box i{*/
+/*    position: absolute;*/
+/*    right:20px;           use when adding icons*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    font-size: 20px;*/
+/*}*/
+
+.input-box textarea{
+    margin-top: -15px;
+    border-radius: 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255,255,255, .2);
+    color: #ffffff;
+    padding: 20px 45px 20px 20px;
+    width: 100%;
+}
+
+.input-box textarea::placeholder{
+    color: black;
+}
+
+.input-box select{
+    margin-top: -15px;
+    border-radius: 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgba(255,255,255, .2);
+    color: black;
+    padding: 20px 45px 20px 20px;
+    width: 100%;
+}
+
+.input-box select option{
+    color: black;
+}
+
+.btn button{
+    width: 500px;
+    height:50px;
+    border-radius: 40px;
+    border:2px solid rgba(255,255,255, .2);
+    outline: none;
+    background: white;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button:hover{
+    background: linear-gradient(to right, rgb(0, 0, 139), rgb(147, 112, 219));
+    color: white;
+}
+
+.input-box input[type="date"]::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.input-box input::-webkit-input-placeholder {
+    color: black;
+}

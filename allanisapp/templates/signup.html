@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<a href=""><img src="" alt=""></a>
+<div class="frm">
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="input-box">
+            <label for="first_name"></label>
+            <input type="text" id="first_name" name="first_name" placeholder="First name" required>
+        </div>
+        <div class="input-box">
+            <label for="last_name"></label>
+            <input type="text" id="last_name" name="last_name" placeholder="Last name" required>
+        </div>
+        <div class="input-box">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-box">
+            <label for="phone_number"></label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="Phone number" required>
+        </div>
+        <div class="input-box">
+            <label for="address"></label>
+            <textarea id="address" name="address" placeholder="Address" rows="2" required></textarea>
+        </div>
+        <div class="input-box">
+            <label for="dob"></label>
+            <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+        </div>
+        <div class="input-box">
+            <label for="gender"></label>
+            <select id="gender" name="gender"  required>
+                <option value="">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="btn">
+            <button value="submit" type="submit">Submit</button>
+        </div>
+    </form>
+
+</div>
+</div>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script>
+    document.querySelectorAll('.input-box input, .input-box textarea, .input-box select').forEach(element => {
+        element.addEventListener('focus', () => {
+            element.classList.add('white-bg');
+        });
+        element.addEventListener('blur', () => {
+            element.classList.remove('white-bg');
+        });
+    });
+</script>
+</body>
+</html>
